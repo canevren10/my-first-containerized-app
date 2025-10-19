@@ -1,13 +1,53 @@
-# í°³ My First Containerized App
+# ï¿½ï¿½ï¿½ My First Containerized App
 
-### í³š Week 2 â€“ Docker Basics
+### ï¿½ï¿½ï¿½ Week 2 â€“ Docker Basics
 
 This project is part of my **8-Week DevOps Learning Plan**.  
 Goal: Learn Docker fundamentals â€” images, containers, and port mapping.
 
 ---
 
-## íº€ Project Overview
+## ï¿½ï¿½ï¿½ Project Overview
 A simple HTML page running inside an **NGINX** container.
 
-### í³ Project Structure
+### ï¿½ï¿½ï¿½ Project Structure
+
+my-first-app/
+â”œâ”€â”€ index.html
+â””â”€â”€ Dockerfile
+
+---
+
+## âš™ï¸ Docker Commands
+```bash
+# Build the Docker image
+docker build -t myfirstapp .
+
+# Run the container
+docker run -d -p 8080:80 --name mycontainer myfirstapp
+
+# List all running containers
+docker ps
+
+# Stop and remove the container
+docker stop mycontainer
+docker rm mycontainer
+
+# Remove the Docker image
+docker rmi myfirstapp
+
+Access the app at:
+ğŸ‘‰ http://localhost:8080
+
+
+ğŸ§  Learned Concepts
+
+Dockerfile basics
+
+Docker image vs container
+
+Port mapping (-p 8080:80)
+
+NGINX as a web server
+
+Simple DevOps workflow
